@@ -7,12 +7,12 @@
 body {
   width: 100vw;
   min-height: 100vh;
-  background-color: rgba(36, 62, 211, 0.13);
+  background-color: #FFF;
 }
 
 .wrap {
   width: 100vw;
-  height: 50vh;
+  height: 60vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,7 +20,7 @@ body {
 
 .clock {
   position: relative;
-  max-width: 400px;
+  max-width: 450px;
   width: 100%;
   transform: scale(-1);
 }
@@ -78,4 +78,10 @@ border-radius: 999px;}
   transform: translateY(-50%) rotate(-90deg);
   width: calc(50% - 80px);
   transition: 0.2s ease;
+}
+
+.timenow {
+  align-items: center;
+  text-align: center;
+  margin-top: -30px;
 }
