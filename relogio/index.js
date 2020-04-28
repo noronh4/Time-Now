@@ -32,3 +32,23 @@ function tick() {
 }
 tick();
 setInterval(tick, 1000);
+
+function data() {
+    let date = new Date();
+    
+    let getTime = date.getTime();
+    let dateTime = Date(getTime);
+    //let patt = /\w{3}\s\w{3}\s\d*\s\d+/gm;
+    console.log(getTime);
+    let patt = /\w{3}\s\w{3}\s\d*\s\d+/gm;
+    
+    let result = dateTime.split(patt);
+    let result2 = patt.exec(dateTime);
+    let result3 = 
+    console.log(result);
+    console.log(result2);
+    //let result = patt.exec(j);
+    //return result;
+}
+
+data();
