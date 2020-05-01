@@ -75,7 +75,6 @@ function data() {
     
     let patt = /\w{3}\s\w{3}\s\d*\s\d+/gm;
     
-    
     let objRegex = patt.exec(dateTime);
     let resultString = objRegex[0];
     let result = resultString.split(' ');
@@ -84,7 +83,6 @@ function data() {
     return result;
 }
 let x = data();
-console.log(x);
 
 const keyDays = [x[0]];
 const keyMonths = [x[1]];
