@@ -12,7 +12,7 @@ body {
 }
 
 .wrap {
-  padding-top: 25px;
+  padding-top: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -91,4 +91,15 @@ border-radius: 999px;}
 .writtenDate {
   font-size: x-large;
   text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media (max-width: 576px) {
+  .wrap {
+    margin-right: 15px;
+    margin-left: 15px;
+  }
 }
