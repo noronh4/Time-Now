@@ -3,28 +3,28 @@ const hand_min = document.querySelector('.hand.minute');
 const hand_sec = document.querySelector('.hand.second');
 
 const days = {
-    'Sun': 'Domingo',
-    'Mon': 'Segunda-feira',
-    'Tue': 'Terca-feira',
-    'Wed': 'Quarta-feira',
-    'Thu': 'Quinta-feira',
-    'Fri': 'Sexta-feira',
-    'Sat': 'Sabado',
+    Sun: 'Domingo',
+    Mon: 'Segunda-feira',
+    Tue: 'Terca-feira',
+    Wed: 'Quarta-feira',
+    Thu: 'Quinta-feira',
+    Fri: 'Sexta-feira',
+    Sat: 'Sabado',
 };
 
 const months = {
-    'Jun': 'Janeiro',
-    'Feb': 'Fevereiro',
-    'Mar': 'Marco',
-    'Apr': 'Abril',
-    'May': 'Maio',
-    'Jun': 'Junho',
-    'Jul': 'Julho',
-    'Aug': 'Agosto',
-    'Sep': 'Setembro',
-    'Oct': 'Outubro',
-    'Nov': 'Novembro',
-    'Dec': 'Dezembro'
+    Jun: 'Janeiro',
+    Feb: 'Fevereiro',
+    Mar: 'Marco',
+    Apr: 'Abril',
+    May: 'Maio',
+    Jun: 'Junho',
+    Jul: 'Julho',
+    Aug: 'Agosto',
+    Sep: 'Setembro',
+    Oct: 'Outubro',
+    Nov: 'Novembro',
+    Dec: 'Dezembro'
 
 };
 
@@ -79,20 +79,13 @@ function data() {
     let resultString = objRegex[0];
     let result = resultString.split(' ');
     
-    // manipular a string de result fora da funcao, atraves do 'return'
+    // retorna um array = [ "Wed", "May", "07", "2020" ]
     return result;
 }
 let x = data();
 
-const keyDays = [x[0]];
-const keyMonths = [x[1]];
+console.log(x);
+const keyDays = x[0];
+const keyMonths = x[1];
 
-
-keyDays.forEach(elements => {
-    let writtingDay = days[keyDays];
-    //coloquei um 'forEach' dentro de outro pra conseguir adicionar os dois valores (writtingDay e writtingMonth) ao html
-    keyMonths.forEach(element => {
-        let writtingMonth = months[keyMonths];
-        document.getElementById('writtenDate').textContent = `${writtingDay}, ${x[2]} de ${writtingMonth} de ${x[3]}`;
-    });
-});
+document.getElementById('writtenDate').textContent = `${days[keyDays]}, ${x[2]} de ${months[keyMonths]} de ${x[3]}`;
