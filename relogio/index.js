@@ -89,3 +89,4 @@ const keyDays = x[0];
 const keyMonths = x[1];
 
 document.getElementById('writtenDate').textContent = `${days[keyDays]}, ${x[2]} de ${months[keyMonths]} de ${x[3]}`;
+let xx = 4;
